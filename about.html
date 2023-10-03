@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpower</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Your existing styles here */
+        body {
+            background-color: violet;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #logo {
+            text-align: center;
+            background: linear-gradient(45deg, #ff4e50, #fc913a, #fcb045, #fcdb3a, #4ed1e5, #ff4e50);
+            background-size: 400% 400%;
+            animation: rainbowBackground 3s linear infinite;
+        }
+
+        @keyframes rainbowBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        #logo img {
+            width: 100%;
+            height: 20vh; /* Adjusts the height automatically to maintain the aspect ratio */
+        } 
+
+        .header-text {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black; /* Text color */
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background: linear-gradient(45deg, #ff4e50, #fc913a); }
+            25% { background: linear-gradient(45deg, #fc913a, #fcb045); }
+            50% { background: linear-gradient(45deg, #fcb045, #fcdb3a); }
+            75% { background: linear-gradient(45deg, #fcdb3a, #4ed1e5); }
+            100% { background: linear-gradient(45deg, #4ed1e5, #ff4e50); }
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .navigation {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        /* Additional styles for improved appearance */
+
+        /* Team members */
+        .team {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .team-member img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .team-member h4 {
+            margin: 10px 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .testimonials blockquote {
+            font-style: italic;
+            margin: 0;
+        }
+
+        /* Call to Action */
+        .call-to-action {
+            text-align: center;
+            margin: 30px;
+        }
+
+        .call-to-action p {
+            margin: 10px 0;
+        }
+
+        .call-to-action button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .call-to-action button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="3.png" alt="Your Logo">
+        </div>
+    </header>
+
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <h2>About Webpower</h2>
+        <p>At Webpower, we are passionate about crafting digital experiences that empower businesses to thrive in the ever-evolving online landscape. With a team of dedicated professionals, we bring together creativity, innovation, and technical expertise to transform your digital vision into reality.</p>
+
+        <h3>Our Mission</h3>
+        <p>Our mission is clear: To redefine the digital presence of businesses by delivering cutting-edge website development solutions. We believe that a strong online presence is the cornerstone of success in today's interconnected world.</p>
+
+        <h3>Who We Are</h3>
+        <ul>
+            <li><strong>Experienced Developers:</strong> Our team is composed of seasoned developers with a deep understanding of web technologies, ensuring that we stay at the forefront of industry trends.</li>
+            <li><strong>Creative Thinkers:</strong> We thrive on creativity and out-of-the-box thinking, crafting unique solutions tailored to each client's needs.</li>
+            <li><strong>Client-Centric Approach:</strong> Your success is our success. We prioritize open communication and collaboration to ensure we meet and exceed your expectations.</li>
+        </ul>
+
+        <h3>What We Do</h3>
+        <ul>
+            <li><strong>Website Development:</strong> We specialize in creating stunning and functional websites that captivate your audience and drive results.</li>
+            <li><strong>E-Commerce Solutions:</strong> Our e-commerce expertise empowers businesses to expand their digital storefronts and boost online sales.</li>
+            <li><strong>Custom Web Applications:</strong> We develop custom web applications that streamline your business operations and enhance user experiences.</li>
+        </ul>
+
+        <h3>Our Commitment</h3>
+        <ul>
+            <li><strong>Quality:</strong> We are committed to delivering top-notch quality in every project, ensuring that your digital presence reflects the excellence of your brand.</li>
+            <li><strong>Innovation:</strong> We stay ahead of the curve by adopting the latest technologies and techniques to keep your online presence fresh and competitive.</li>
+            <li><strong>Client Satisfaction:</strong> Your satisfaction is our ultimate goal. We work closely with you to understand your unique needs and objectives.</li>
+        </ul>
+
+        <h3>Join Us on the Digital Journey</h3>
+        <p>Whether you're a startup looking to make a bold entrance into the digital world or an established brand seeking a digital transformation, Webpower is your trusted partner. Let's embark on this digital journey together and unlock the full potential of your online presence.</p>
+        <p>Contact us today to discuss how we can elevate your online presence and drive success in the digital realm.</p>
+    </div>
+    
+
+    <section class="team">
+        <h3>Our Team</h3>
+        <div class="team-member">
+            <img src="yaw-frimpong-dame.jpg" alt="Mr. Yaw Frimpong Dame">
+            <h4>Mr. Yaw Frimpong Dame</h4>
+            <p>Lead Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="abner-kamas.jpg" alt="Abner Kamas">
+            <h4>Abner Kamas</h4>
+            <p>Lead Developer</p>
+        </div>
+        <!-- You can add more team members if needed -->
+    </section>
+    
+
+    <section class="testimonials">
+        <h3>What Our Clients Say</h3>
+        <blockquote>"Working with this team was a fantastic experience. They delivered a top-notch website on time and within budget."</blockquote>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <section class="call-to-action">
+        <h3>Ready to get started?</h3>
+        <p>Contact us today for a free consultation.</p>
+        <a href="contact.html"><button>Contact Us</button></a>
+    </section>
+    
+</body>
+</html>

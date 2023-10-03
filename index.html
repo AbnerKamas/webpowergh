@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpower</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            background-color: violet;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #logo {
+            text-align: center;
+            background: linear-gradient(45deg, #ff4e50, #fc913a, #fcb045, #fcdb3a, #4ed1e5, #ff4e50);
+            background-size: 400% 400%;
+            animation: rainbowBackground 3s linear infinite;
+        }
+
+        @keyframes rainbowBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        #logo img {
+            width: 100%;
+            height: 20vh; /* Adjusts the height automatically to maintain the aspect ratio */
+        } 
+
+        .header-text {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black; /* Text color */
+            animation: rainbow 3s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background: linear-gradient(45deg, #ff4e50, #fc913a); }
+            25% { background: linear-gradient(45deg, #fc913a, #fcb045); }
+            50% { background: linear-gradient(45deg, #fcb045, #fcdb3a); }
+            75% { background: linear-gradient(45deg, #fcdb3a, #4ed1e5); }
+            100% { background: linear-gradient(45deg, #4ed1e5, #ff4e50); }
+        }
+
+        .slider-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            overflow: hidden;
+            margin-top: 20px; /* Move the slider down */
+        }
+
+        .slider {
+            display: flex;
+            width: 300%; /* 3 images, each 100% width */
+            transition: transform 0.5s ease;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider-controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .prev, .next {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            margin-right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #555;
+        }
+
+        .promotion {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .navigation {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="3.png" alt="Your Logo">
+        </div>
+    </header>
+
+    <div class="navigation">
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <button class="prev" onclick="prevSlide()">Previous</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <div class="promotion">
+        <h2>Welcome to Our Website!</h2>
+        <p>Discover amazing products and services. Join our community for exclusive offers and updates.</p>
+        <a href="about.html" class="learn-more-button">Learn More</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slider img');
+            if (n < 0) slideIndex = slides.length - 1;
+            if (n >= slides.length) slideIndex = 0;
+            const translateX = -slideIndex * 100;
+            document.querySelector('.slider').style.transform = `translateX(${translateX}%)`;
+        }
+
+        function prevSlide() {
+            showSlide(--slideIndex);
+        }
+
+        function nextSlide() {
+            showSlide(++slideIndex);
+        }
+
+        // Show the initial slide
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>

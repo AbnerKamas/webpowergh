@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        /* Reset default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+         /* Styles for the overlay and pop-up */
+         .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+
+        /* Background and container styles */
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Provide Your Feedback</h1>
+            <p>We value your input. Please share your feedback with us.</p>
+        </header>
+
+        <!-- Feedback Form -->
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <footer>
+            &copy; 2023 Webpower. All Rights Reserved.
+        </footer>
+    </div>
+     <!-- Thank You Pop-up -->
+     <div class="overlay" id="thankYouOverlay">
+        <div class="popup">
+            <p>Thank you for sharing your feedback with us!</p>
+            <p>Your input is valuable and helps us improve our services.</p>
+            <p>We appreciate your time and effort in helping us make your experience better.</p>
+            <p>If you have any more thoughts or suggestions, please feel free to reach out to us anytime.</p>
+            <button onclick="closeThankYouPopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling the feedback form submission
+        document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+            window.location.href = "feedback.html"; // Redirect to the feedback page
+
+            // You can customize the code here to handle the feedback submission, such as sending it to your server or storing it in a database.
+            
+            // For demonstration purposes, we'll display an alert with the submitted data.
+            const formData = new FormData(event.target);
+            const feedbackData = {};
+            formData.forEach((value, key) => {
+                feedbackData[key] = value;
+            });
+
+        function closeThankYouPopup() {
+            document.getElementById("thankYouOverlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>
